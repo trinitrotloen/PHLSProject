@@ -16,7 +16,7 @@ namespace PlayerListSubmissionProject
     {
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static string ApplicationName = "Google Sheets API .NET Quickstart";
-        static String spreadsheetId = "1VpLNsaYf4Fv9UZdI6uPx2zHTPznU2XSiqPaFaiBASjA";
+        static String spreadsheetId = null; 
         static String rangeHeroes = "Heroes List!H2:H";
         static String rangePlayers = "Player List!A5:A35";
 
@@ -25,6 +25,11 @@ namespace PlayerListSubmissionProject
             InitializeComponent();
         }
 
+        public Form1(string _spreadsheetID)
+        {
+            spreadsheetId = _spreadsheetID;
+            InitializeComponent();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             UserCredential credential;
@@ -160,6 +165,7 @@ namespace PlayerListSubmissionProject
             var response = app.Execute();
 
         }
+
     }
 }
 

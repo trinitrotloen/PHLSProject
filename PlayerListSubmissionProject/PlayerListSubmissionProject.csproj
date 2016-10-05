@@ -26,7 +26,7 @@
     <UpdateUrl>https://drive.google.com/drive/folders/0B9QBi-btPURcLUJqVER6RU5ncFk/</UpdateUrl>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -134,6 +134,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpreadsheetSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpreadsheetSelectionForm.Designer.cs">
+      <DependentUpon>SpreadsheetSelectionForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SpreadsheetSelectionForm.resx">
+      <DependentUpon>SpreadsheetSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="client_secret.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
