@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="PlayerListSubmissionProject.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="PlayerListSubmissionProject" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="PlayerListSubmissionProject" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="PlayerListSubmissionProject.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="25600">
-      <assemblyIdentity name="PlayerListSubmissionProject" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="27648">
+      <assemblyIdentity name="PlayerListSubmissionProject" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H77PxRV0B7nBqaRLAk1R3BwIIb8Mv0vXHmDjkkvkWyw=</dsig:DigestValue>
+        <dsig:DigestValue>D3ZSdYe7BJ4JDR4ZgAeCV9JopWUw1OKuGVdVdJChzk8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -180,6 +180,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ReadMe.txt" size="611">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cGIHpAWCMUXaNP9ez22+DH5dbR3Kdso7SF3o7zJEsXE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelUsername = new System.Windows.Forms.Label();
             this.comboUsername = new System.Windows.Forms.ComboBox();
             this.gbAllianceWar = new System.Windows.Forms.GroupBox();
@@ -78,6 +79,12 @@
             this.comboHeroList11 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.SummonerRating = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.SummonerLevel = new System.Windows.Forms.NumericUpDown();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.gbAllianceWar.SuspendLayout();
             this.gbAWAttackers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
@@ -93,14 +100,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummonerRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummonerLevel)).BeginInit();
             this.SuspendLayout();
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
+            this.labelUsername.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelUsername.Location = new System.Drawing.Point(13, 13);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(55, 13);
+            this.labelUsername.Size = new System.Drawing.Size(57, 15);
             this.labelUsername.TabIndex = 0;
             this.labelUsername.Text = "Username";
             // 
@@ -673,11 +683,13 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(545, 183);
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label10.Location = new System.Drawing.Point(573, 190);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(208, 26);
+            this.label10.Size = new System.Drawing.Size(210, 28);
             this.label10.TabIndex = 4;
             this.label10.Text = "PLEASE CHECK YOUR DETAILS AGAIN \r\nBEFORE SUBMISSION";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // buttonSubmit
             // 
@@ -691,11 +703,67 @@
             this.buttonSubmit.UseVisualStyleBackColor = true;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
+            // SummonerRating
+            // 
+            this.SummonerRating.Location = new System.Drawing.Point(380, 11);
+            this.SummonerRating.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.SummonerRating.Name = "SummonerRating";
+            this.SummonerRating.Size = new System.Drawing.Size(72, 20);
+            this.SummonerRating.TabIndex = 57;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label11.Location = new System.Drawing.Point(283, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 15);
+            this.label11.TabIndex = 58;
+            this.label11.Text = "Summoner Rating";
+            // 
+            // label12
+            // 
+            this.label12.AccessibleDescription = "";
+            this.label12.AutoSize = true;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label12.Location = new System.Drawing.Point(545, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 15);
+            this.label12.TabIndex = 60;
+            this.label12.Text = "Summoner Level";
+            // 
+            // SummonerLevel
+            // 
+            this.SummonerLevel.Location = new System.Drawing.Point(642, 11);
+            this.SummonerLevel.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.SummonerLevel.Name = "SummonerLevel";
+            this.SummonerLevel.Size = new System.Drawing.Size(72, 20);
+            this.SummonerLevel.TabIndex = 59;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 300;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 268);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.SummonerLevel);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.SummonerRating);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox1);
@@ -723,6 +791,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummonerRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SummonerLevel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -780,6 +850,12 @@
         private System.Windows.Forms.ComboBox comboHeroList11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.NumericUpDown SummonerRating;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.NumericUpDown SummonerLevel;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }
 

@@ -14,14 +14,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="PlayerListSubmissionProject.exe.manifest" size="11584">
+    <dependentAssembly dependencyType="install" codebase="PlayerListSubmissionProject.exe.manifest" size="11971">
       <assemblyIdentity name="PlayerListSubmissionProject.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1x6wcYb0XnkKnNrRsccZeZILqlkO2hPKfOAVdTy4uKs=</dsig:DigestValue>
+        <dsig:DigestValue>qgf4fq8fg+LLgb69zK9FyXl9PWhWZN3cal1QriWG16s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

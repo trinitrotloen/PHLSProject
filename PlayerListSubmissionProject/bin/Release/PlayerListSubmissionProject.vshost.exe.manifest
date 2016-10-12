@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="25600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="27136">
       <assemblyIdentity name="PlayerListSubmissionProject" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H77PxRV0B7nBqaRLAk1R3BwIIb8Mv0vXHmDjkkvkWyw=</dsig:DigestValue>
+        <dsig:DigestValue>kZRLuO3okW1tzxwdddBka7gjwKRLfdvLGvnHpVkfJWU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

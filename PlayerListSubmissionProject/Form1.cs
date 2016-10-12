@@ -109,6 +109,8 @@ namespace PlayerListSubmissionProject
             }
             #endregion Heroes Combo box filling
 
+            toolTip1.SetToolTip(label12, "Summoner Level represented in Summoner Profile");
+            toolTip2.SetToolTip(label11, "\"Total Base Hero Rating\" that represented in Summoner Profile");
         }
 
         private void buttonSubmit_Click(object sender, EventArgs e)
@@ -151,19 +153,22 @@ namespace PlayerListSubmissionProject
             values.Add(comboHeroList9.Text + " " + comboBox9.Text + " " + numericUpDown9.Value);
             values.Add(comboHeroList10.Text + " " + comboBox10.Text + " " + numericUpDown10.Value);
             values.Add(comboHeroList11.Text + " " + comboBox11.Text + " " + numericUpDown11.Value);
+            values.Add(SummonerLevel.Value);
+            values.Add(SummonerRating.Value);
 
             var valuesFromForm = new List<IList<Object>> { };
             valuesFromForm.Add(values);
 
             var valueRangebody = new ValueRange();
-            valueRangebody.Range = "abidik!A1:M1";
+            valueRangebody.Range = "Heroes App Responses!A1:O1";
             valueRangebody.MajorDimension = "ROWS";
             valueRangebody.Values = valuesFromForm;
 
-            SpreadsheetsResource.ValuesResource.AppendRequest app = service.Spreadsheets.Values.Append(valueRangebody, spreadsheetId, "abidik!A1:M1");
+            SpreadsheetsResource.ValuesResource.AppendRequest app = service.Spreadsheets.Values.Append(valueRangebody, spreadsheetId, "Heroes App Responses!A1:O1");
             app.ValueInputOption = SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.RAW;
             var response = app.Execute();
 
+            MessageBox.Show("Submission Sent.");
         }
 
     }
