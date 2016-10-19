@@ -11,38 +11,25 @@ using System.Threading;
 
 namespace PlayerListSubmissionProject
 {
-    public partial class SpreadsheetSelectionForm : Form
+    public partial class AdministrationForm : Form
     {
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static string ApplicationName = "Google Sheets API .NET Quickstart";
         static String spreadsheetId = "1XW9N0Q0nEspvkKHvgj5mmSDajtBDmMBB_weaEZQxICw";
-        static String rangeTeams = "TeamList!A2:B";
-
+        static String rangeTeams = "TeamList!A2:D";
+        public string _teamTag;
         SpreadsheetsResource.ValuesResource.GetRequest request;
         ValueRange response;
         IList<IList<Object>> values;
-        // Define request parameters.
 
-        public SpreadsheetSelectionForm()
+        public AdministrationForm(string TeamTag)
         {
+            _teamTag = TeamTag;
             InitializeComponent();
         }
 
-        private void spreadsheetSubmit(object sender, EventArgs e)
+        private void AdministrationForm_Load(object sender, EventArgs e)
         {
-            var sheetid = findSheetID(comboBox1.Text);
-            this.Hide();
-            Form phls = new Form1(sheetid);
-            phls.ShowDialog();
-            foreach (var openform in Application.OpenForms)
-            {
-                this.Show();
-            }
-        }
-
-        private void SpreadsheetSelectionForm_Load(object sender, EventArgs e)
-        {
-
             UserCredential credential;
 
             using (var stream =
@@ -67,7 +54,7 @@ namespace PlayerListSubmissionProject
                 ApplicationName = ApplicationName,
             });
 
-            
+
             #region Team List Combo box filling
             request = service.Spreadsheets.Values.Get(spreadsheetId, rangeTeams);
             // Gets the Heroes from spreadsheet:
@@ -78,38 +65,21 @@ namespace PlayerListSubmissionProject
             {
                 foreach (var row in values)
                 {
-                    comboBox1.Items.Add(row[0]);
+                    if (row[0].ToString() == _teamTag)
+                    {
+                        labelTeamName.Text = _teamTag;
+                        labelSSID.Text = row[1].ToString();
+                        labelAdminPass.Text = row[2].ToString();
+                        labelMemberPass.Text = row[3].ToString();
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("No Data Found", "", MessageBoxButtons.OK);
+                MessageBox.Show("No Team Data Found", "", MessageBoxButtons.OK);
             }
             #endregion Team List Combo box filling
-        }
 
-        private string findSheetID (string teamTAG)
-        {
-            values = response.Values;
-            for (int i = 0; i < values.Count; i++) {
-                    if (values[i].Contains(teamTAG))
-                    {
-                        return values[i][1].ToString();
-                    }
-                }
-            return "";
-        }
-
-        private void button_TeamManage_Click(object sender, EventArgs e)
-        {
-            var teamTag = comboBox1.Text;
-            this.Hide();
-            Form adminf = new AdministrationForm(teamTag);
-            adminf.ShowDialog();
-            foreach (var openform in Application.OpenForms)
-            {
-                this.Show();
-            }
         }
     }
 }

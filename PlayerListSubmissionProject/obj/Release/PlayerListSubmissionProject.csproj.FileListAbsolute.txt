@@ -123,3 +123,4 @@ F:\Users\EmreYavuz\PHLSProject\PlayerListSubmissionProject\obj\Release\PlayerLis
 F:\Users\EmreYavuz\PHLSProject\PlayerListSubmissionProject\obj\Release\PlayerListSubmissionProject.TrustInfo.xml
 F:\Users\EmreYavuz\PHLSProject\PlayerListSubmissionProject\obj\Release\PlayerListSubmissionProject.exe.manifest
 F:\Users\EmreYavuz\PHLSProject\PlayerListSubmissionProject\obj\Release\PlayerListSubmissionProject.application
+F:\Users\EmreYavuz\PHLSProject\PlayerListSubmissionProject\obj\Release\PlayerListSubmissionProject.AdministrationForm.resources

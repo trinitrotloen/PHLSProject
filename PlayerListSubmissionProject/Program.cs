@@ -15,6 +15,7 @@ namespace PlayerListSubmissionProject
             Application.SetCompatibleTextRenderingDefault(false);
             // Application.Run(new Form1());
             Application.Run(new SpreadsheetSelectionForm());
+            //Application.Run(new AdministrationForm("GOS3"));
         }
     }
 }
