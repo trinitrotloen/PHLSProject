@@ -42,6 +42,7 @@
             this.memberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -53,10 +54,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabMemberInfo = new System.Windows.Forms.TabPage();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabEventInfo = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabTeamInfo.SuspendLayout();
+            this.tabMemberInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +82,8 @@
             this.actionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.teamToolStripMenuItem,
             this.eventToolStripMenuItem,
-            this.memberToolStripMenuItem});
+            this.memberToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.actionsToolStripMenuItem.Name = "actionsToolStripMenuItem";
             this.actionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.actionsToolStripMenuItem.Text = "Actions";
@@ -86,6 +95,7 @@
             this.memberPassToolStripMenuItem,
             this.spreadsheetIDToolStripMenuItem,
             this.tagToolStripMenuItem});
+            this.teamToolStripMenuItem.Enabled = false;
             this.teamToolStripMenuItem.Name = "teamToolStripMenuItem";
             this.teamToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.teamToolStripMenuItem.Text = "Change Team...";
@@ -120,6 +130,7 @@
             this.addToolStripMenuItem1,
             this.modifyToolStripMenuItem,
             this.deleteToolStripMenuItem});
+            this.eventToolStripMenuItem.Enabled = false;
             this.eventToolStripMenuItem.Name = "eventToolStripMenuItem";
             this.eventToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.eventToolStripMenuItem.Text = "Event";
@@ -147,6 +158,7 @@
             this.memberToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
             this.removeToolStripMenuItem});
+            this.memberToolStripMenuItem.Enabled = false;
             this.memberToolStripMenuItem.Name = "memberToolStripMenuItem";
             this.memberToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.memberToolStripMenuItem.Text = "Member";
@@ -162,6 +174,13 @@
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.removeToolStripMenuItem.Text = "Remove...";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -270,6 +289,12 @@
             // 
             // tabMemberInfo
             // 
+            this.tabMemberInfo.Controls.Add(this.button1);
+            this.tabMemberInfo.Controls.Add(this.buttonRemove);
+            this.tabMemberInfo.Controls.Add(this.comboBox1);
+            this.tabMemberInfo.Controls.Add(this.buttonAdd);
+            this.tabMemberInfo.Controls.Add(this.textBox1);
+            this.tabMemberInfo.Controls.Add(this.flowLayoutPanel1);
             this.tabMemberInfo.Location = new System.Drawing.Point(4, 22);
             this.tabMemberInfo.Name = "tabMemberInfo";
             this.tabMemberInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -277,6 +302,69 @@
             this.tabMemberInfo.TabIndex = 1;
             this.tabMemberInfo.Text = "Members";
             this.tabMemberInfo.UseVisualStyleBackColor = true;
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRemove.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.buttonRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRemove.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonRemove.Location = new System.Drawing.Point(3, 90);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(107, 23);
+            this.buttonRemove.TabIndex = 4;
+            this.buttonRemove.Text = "Remove";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(107, 24);
+            this.comboBox1.Sorted = true;
+            this.comboBox1.TabIndex = 3;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAdd.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.buttonAdd.Location = new System.Drawing.Point(3, 34);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(107, 23);
+            this.buttonAdd.TabIndex = 2;
+            this.buttonAdd.Text = "Add Member";
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(3, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(107, 21);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Member Name";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(116, 7);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(355, 184);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tabEventInfo
             // 
@@ -288,6 +376,22 @@
             this.tabEventInfo.Text = "Events";
             this.tabEventInfo.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(3, 119);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 72);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "SUBMIT YOUR CHANGES";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AdministrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +399,7 @@
             this.ClientSize = new System.Drawing.Size(509, 262);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AdministrationForm";
             this.Text = "AdministrationForm";
@@ -304,6 +409,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabTeamInfo.ResumeLayout(false);
             this.tabTeamInfo.PerformLayout();
+            this.tabMemberInfo.ResumeLayout(false);
+            this.tabMemberInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +444,12 @@
         private System.Windows.Forms.Label labelSSID;
         private System.Windows.Forms.Label labelTeamName;
         private System.Windows.Forms.ToolStripMenuItem teamToolStripMenuItem;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button buttonRemove;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

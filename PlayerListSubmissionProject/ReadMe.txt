@@ -1,9 +1,16 @@
 RELEASE HISTORY and TO DO LIST
 
-V2.1 - Current Version
+V2.3 - Development Version
+* Basic member operations added.
+
+V2.2 
+* Administration Form added.
+* "Submit" button replaced with "Team Management" and "Member" button at Team Selection Form.
+
+V2.1 
 * Summoner Level and Rating information Added.
 
-V2.0
+V2.0 - Release Version
 * New form added for team selection to support multi-usage.
 
 V1.0
@@ -12,8 +19,10 @@ V1.0
 * Player List Submission implemented.
 
 TO DO LIST
-* New team addition for administration issues.
-* New Player Tracking db creation for new teams submitted to the system.
-* New Player adding - removing functionality will be added.
 * TEAM BASED Password control will be added.
+* Team Admin and member password changes will be added.
+* Team name change will be added.
+* Team password change will be added.
+* New team submission will be added.
+* New Player adding - removing functionality will be added.
 * Player information will be filled from DB when selected.

@@ -13,8 +13,6 @@ namespace PlayerListSubmissionProject
 {
     public partial class SpreadsheetSelectionForm : Form
     {
-        static string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static string ApplicationName = "Google Sheets API .NET Quickstart";
         static String spreadsheetId = "1XW9N0Q0nEspvkKHvgj5mmSDajtBDmMBB_weaEZQxICw";
         static String rangeTeams = "TeamList!A2:B";
 
@@ -42,34 +40,10 @@ namespace PlayerListSubmissionProject
 
         private void SpreadsheetSelectionForm_Load(object sender, EventArgs e)
         {
-
-            UserCredential credential;
-
-            using (var stream =
-                new FileStream("client_secret.json", FileMode.Open, FileAccess.ReadWrite))
-            {
-                string credPath = System.Environment.GetFolderPath(
-                    System.Environment.SpecialFolder.Personal);
-                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
-
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-            }
-
-            // Create Google Sheets API service.
-            var service = new SheetsService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
-
+            CC ConCredentials = new CC();
             
             #region Team List Combo box filling
-            request = service.Spreadsheets.Values.Get(spreadsheetId, rangeTeams);
+            request = ConCredentials.service.Spreadsheets.Values.Get(spreadsheetId, rangeTeams);
             // Gets the Heroes from spreadsheet:
 
             response = request.Execute();

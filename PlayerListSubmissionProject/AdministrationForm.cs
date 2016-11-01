@@ -13,8 +13,6 @@ namespace PlayerListSubmissionProject
 {
     public partial class AdministrationForm : Form
     {
-        static string[] Scopes = { SheetsService.Scope.Spreadsheets };
-        static string ApplicationName = "Google Sheets API .NET Quickstart";
         static String spreadsheetId = "1XW9N0Q0nEspvkKHvgj5mmSDajtBDmMBB_weaEZQxICw";
         static String rangeTeams = "TeamList!A2:D";
         public string _teamTag;
@@ -30,33 +28,10 @@ namespace PlayerListSubmissionProject
 
         private void AdministrationForm_Load(object sender, EventArgs e)
         {
-            UserCredential credential;
-
-            using (var stream =
-                new FileStream("client_secret.json", FileMode.Open, FileAccess.ReadWrite))
-            {
-                string credPath = System.Environment.GetFolderPath(
-                    System.Environment.SpecialFolder.Personal);
-                credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
-
-                credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    GoogleClientSecrets.Load(stream).Secrets,
-                    Scopes,
-                    "user",
-                    CancellationToken.None,
-                    new FileDataStore(credPath, true)).Result;
-            }
-
-            // Create Google Sheets API service.
-            var service = new SheetsService(new BaseClientService.Initializer()
-            {
-                HttpClientInitializer = credential,
-                ApplicationName = ApplicationName,
-            });
-
+            CC ConCredential = new CC();
 
             #region Team List Combo box filling
-            request = service.Spreadsheets.Values.Get(spreadsheetId, rangeTeams);
+            request = ConCredential.service.Spreadsheets.Values.Get(spreadsheetId, rangeTeams);
             // Gets the Heroes from spreadsheet:
 
             response = request.Execute();
@@ -80,6 +55,36 @@ namespace PlayerListSubmissionProject
             }
             #endregion Team List Combo box filling
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Label member = new Label();
+            member.Text = textBox1.Text;
+            member.Name = textBox1.Text;
+            member.Click += Member_Click;
+            flowLayoutPanel1.Controls.Add(member);
+            comboBox1.Items.Add(member.Text);
+        }
+
+        private void Member_Click(object sender, EventArgs e)
+        {
+
+            throw new NotImplementedException();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            string member = comboBox1.Text;
+            flowLayoutPanel1.Controls.RemoveByKey(member);
+            comboBox1.Items.Remove(member);
+            comboBox1.ResetText();
         }
     }
 }

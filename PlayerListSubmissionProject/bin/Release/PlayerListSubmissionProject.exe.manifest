@@ -150,14 +150,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="34304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="37376">
       <assemblyIdentity name="PlayerListSubmissionProject" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g4pN/Pkje5eCSckpvOU/JeELSrubfpJrSdwVmnBwuZQ=</dsig:DigestValue>
+        <dsig:DigestValue>nU4ngOx8RsQOgHL0e4+v/2hVobUJM7GBD0+znQJosoA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,13 +182,13 @@
       <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ReadMe.txt" size="611">
+  <file name="ReadMe.txt" size="812">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cGIHpAWCMUXaNP9ez22+DH5dbR3Kdso7SF3o7zJEsXE=</dsig:DigestValue>
+      <dsig:DigestValue>w7KmZr5nyLwukv7WF6wWZZ2uNt0oiXQySBKu8MnBtlU=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

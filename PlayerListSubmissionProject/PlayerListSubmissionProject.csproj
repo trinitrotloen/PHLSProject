@@ -132,6 +132,7 @@
     <Compile Include="AdministrationForm.Designer.cs">
       <DependentUpon>AdministrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CC.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
