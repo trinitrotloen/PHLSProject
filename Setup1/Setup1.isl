@@ -3967,7 +3967,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{2013299D-F60A-4752-86C3-B07E51D90D21}</td></row>
 		<row><td>ISUSSignature</td><td>{3B7C58ED-7EAD-4C4D-B6FB-44BFF49C84C1}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRelease,viewShortcuts</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewProject,viewRelease,viewShortcuts,viewUpgradePaths,viewUpdateService,viewAppFiles,viewObjects</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4344,7 +4344,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGRAMFILETOLAUNCHATEND</td><td>[INSTALLDIR]PlayerListSubmissionProject.Primary output</td><td/></row>
 		<row><td>ProductCode</td><td>{FB87E480-CC89-4DBA-B70A-1A94CBAE1DB5}</td><td/></row>
 		<row><td>ProductName</td><td>Player Heroes Submission</td><td/></row>
-		<row><td>ProductVersion</td><td>2.1</td><td/></row>
+		<row><td>ProductVersion</td><td>2.3</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

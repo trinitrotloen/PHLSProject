@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="PlayerListSubmissionProject.exe" version="2.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="PlayerListSubmissionProject" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="PlayerListSubmissionProject" version="2.3.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="PlayerListSubmissionProject.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -151,13 +151,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlayerListSubmissionProject.exe" size="37376">
-      <assemblyIdentity name="PlayerListSubmissionProject" version="2.1.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="PlayerListSubmissionProject" version="2.3.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nU4ngOx8RsQOgHL0e4+v/2hVobUJM7GBD0+znQJosoA=</dsig:DigestValue>
+        <dsig:DigestValue>bAvXjdWCCz1honbBCTrRL6jIbaIVGPGmDdoTUHwf5Dc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,13 +182,13 @@
       <dsig:DigestValue>6N7MliNbVJSIAIPrecIshMbZ7zEoKLr5SQvud4LDUOw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ReadMe.txt" size="812">
+  <file name="ReadMe.txt" size="855">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w7KmZr5nyLwukv7WF6wWZZ2uNt0oiXQySBKu8MnBtlU=</dsig:DigestValue>
+      <dsig:DigestValue>n6aWcEuzp56V8TbfYELCdmeRFVakPg3ofgf/bEy80OM=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
